@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Models.Notification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Notification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageNotification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageNotification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateNotification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateNotification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdNotification }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

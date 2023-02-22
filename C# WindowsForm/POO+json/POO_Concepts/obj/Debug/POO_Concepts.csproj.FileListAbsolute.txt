@@ -1,0 +1,14 @@
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\bin\Debug\POO_Concepts.exe.config
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\bin\Debug\POO_Concepts.exe
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\bin\Debug\POO_Concepts.pdb
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\obj\Debug\POO_Concepts.csprojAssemblyReference.cache
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\obj\Debug\POO_Concepts.csproj.CoreCompileInputs.cache
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\obj\Debug\POO_Concepts.exe
+C:\Users\afpa\source\repos\POO_Concepts\POO_Concepts\obj\Debug\POO_Concepts.pdb
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\bin\Debug\POO_Concepts.exe.config
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\bin\Debug\POO_Concepts.exe
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\bin\Debug\POO_Concepts.pdb
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\obj\Debug\POO_Concepts.csprojAssemblyReference.cache
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\obj\Debug\POO_Concepts.csproj.CoreCompileInputs.cache
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\obj\Debug\POO_Concepts.exe
+E:\cours Afpa2\C# WindowsForm\POO+json\POO_Concepts\obj\Debug\POO_Concepts.pdb

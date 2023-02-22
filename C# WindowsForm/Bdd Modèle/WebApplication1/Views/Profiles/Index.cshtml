@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication1.Models.Profile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Notification.MessageNotification)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notification.MessageNotification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdProfile }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdProfile }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdProfile })
+        </td>
+    </tr>
+}
+
+</table>

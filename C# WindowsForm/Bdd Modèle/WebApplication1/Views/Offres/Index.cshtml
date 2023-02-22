@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebApplication1.Models.Offre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroOffre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TitreOffre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionOffre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anciennete.DureeExperience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contrat.TypeDeContrat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Metier.CategorieMetier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region.ListeRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remuneration.IdRemuneration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroOffre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TitreOffre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionOffre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anciennete.DureeExperience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contrat.TypeDeContrat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Metier.CategorieMetier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region.ListeRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remuneration.IdRemuneration)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdOffre }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdOffre }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdOffre })
+        </td>
+    </tr>
+}
+
+</table>

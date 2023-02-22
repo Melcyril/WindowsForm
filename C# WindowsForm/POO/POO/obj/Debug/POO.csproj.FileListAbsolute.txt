@@ -1,0 +1,22 @@
+C:\Users\Utilisateur\source\repos\POO\POO\bin\Debug\POO.exe.config
+C:\Users\Utilisateur\source\repos\POO\POO\bin\Debug\POO.exe
+C:\Users\Utilisateur\source\repos\POO\POO\bin\Debug\POO.pdb
+C:\Users\Utilisateur\source\repos\POO\POO\obj\Debug\POO.csprojAssemblyReference.cache
+C:\Users\Utilisateur\source\repos\POO\POO\obj\Debug\POO.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\POO\POO\obj\Debug\POO.exe
+C:\Users\Utilisateur\source\repos\POO\POO\obj\Debug\POO.pdb
+E:\cours Afpa2\C# WindowsForm\POO\POO\bin\Debug\POO.exe.config
+E:\cours Afpa2\C# WindowsForm\POO\POO\bin\Debug\POO.exe
+E:\cours Afpa2\C# WindowsForm\POO\POO\bin\Debug\POO.pdb
+E:\cours Afpa2\C# WindowsForm\POO\POO\obj\Debug\POO.csprojAssemblyReference.cache
+E:\cours Afpa2\C# WindowsForm\POO\POO\obj\Debug\POO.csproj.CoreCompileInputs.cache
+E:\cours Afpa2\C# WindowsForm\POO\POO\obj\Debug\POO.exe
+E:\cours Afpa2\C# WindowsForm\POO\POO\obj\Debug\POO.pdb
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\bin\Debug\POO.exe.config
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\bin\Debug\POO.exe
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\bin\Debug\POO.pdb
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\obj\Debug\POO.csproj.AssemblyReference.cache
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\obj\Debug\POO.csproj.SuggestedBindingRedirects.cache
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\obj\Debug\POO.csproj.CoreCompileInputs.cache
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\obj\Debug\POO.exe
+C:\Users\cyril\Desktop\buro\Cours Afpa2Alex\C# WindowsForm\POO\POO\obj\Debug\POO.pdb

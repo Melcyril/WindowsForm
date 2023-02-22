@@ -1,0 +1,26 @@
+﻿@model WebApplication1.Models.Contrat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contrat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeDeContrat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeDeContrat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdContrat }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

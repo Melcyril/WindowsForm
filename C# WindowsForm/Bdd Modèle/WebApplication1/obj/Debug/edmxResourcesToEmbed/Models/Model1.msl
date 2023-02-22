@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="baeModelStoreContainer" CdmEntityContainer="baeEntities">
+    <EntitySetMapping Name="Acces">
+      <EntityTypeMapping TypeName="baeModel.Acces">
+        <MappingFragment StoreEntitySet="Acces">
+          <ScalarProperty Name="IdAcces" ColumnName="IdAcces" />
+          <ScalarProperty Name="Statut" ColumnName="Statut" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adresse">
+      <EntityTypeMapping TypeName="baeModel.Adresse">
+        <MappingFragment StoreEntitySet="Adresse">
+          <ScalarProperty Name="IdAdresse" ColumnName="IdAdresse" />
+          <ScalarProperty Name="Rue" ColumnName="Rue" />
+          <ScalarProperty Name="CodePostal" ColumnName="CodePostal" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Pays" ColumnName="Pays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Anciennete">
+      <EntityTypeMapping TypeName="baeModel.Anciennete">
+        <MappingFragment StoreEntitySet="Anciennete">
+          <ScalarProperty Name="IdAnciennete" ColumnName="IdAnciennete" />
+          <ScalarProperty Name="DureeExperience" ColumnName="DureeExperience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Article">
+      <EntityTypeMapping TypeName="baeModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="IdArticle" ColumnName="IdArticle" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="Descriptif" ColumnName="Descriptif" />
+          <ScalarProperty Name="IdImage" ColumnName="IdImage" />
+          <ScalarProperty Name="IdAcces" ColumnName="IdAcces" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidature">
+      <EntityTypeMapping TypeName="baeModel.Candidature">
+        <MappingFragment StoreEntitySet="Candidature">
+          <ScalarProperty Name="IdCandidature" ColumnName="IdCandidature" />
+          <ScalarProperty Name="DATECandidature" ColumnName="DATECandidature" />
+          <ScalarProperty Name="IdOffre" ColumnName="IdOffre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Competence">
+      <EntityTypeMapping TypeName="baeModel.Competence">
+        <MappingFragment StoreEntitySet="Competence">
+          <ScalarProperty Name="IdCompetence" ColumnName="IdCompetence" />
+          <ScalarProperty Name="ListeCompetence" ColumnName="ListeCompetence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrat">
+      <EntityTypeMapping TypeName="baeModel.Contrat">
+        <MappingFragment StoreEntitySet="Contrat">
+          <ScalarProperty Name="IdContrat" ColumnName="IdContrat" />
+          <ScalarProperty Name="TypeDeContrat" ColumnName="TypeDeContrat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cv">
+      <EntityTypeMapping TypeName="baeModel.Cv">
+        <MappingFragment StoreEntitySet="Cv">
+          <ScalarProperty Name="IdCv" ColumnName="IdCv" />
+          <ScalarProperty Name="NomCv" ColumnName="NomCv" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IdCompetence" ColumnName="IdCompetence" />
+          <ScalarProperty Name="IdProfile" ColumnName="IdProfile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Image">
+      <EntityTypeMapping TypeName="baeModel.Image">
+        <MappingFragment StoreEntitySet="Image">
+          <ScalarProperty Name="IdImage" ColumnName="IdImage" />
+          <ScalarProperty Name="NomImage" ColumnName="NomImage" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inscrit">
+      <EntityTypeMapping TypeName="baeModel.Inscrit">
+        <MappingFragment StoreEntitySet="Inscrit">
+          <ScalarProperty Name="IdInscrit" ColumnName="IdInscrit" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Siret" ColumnName="Siret" />
+          <ScalarProperty Name="IdAcces" ColumnName="IdAcces" />
+          <ScalarProperty Name="IdAdresse" ColumnName="IdAdresse" />
+          <ScalarProperty Name="IdMaintenance" ColumnName="IdMaintenance" />
+          <ScalarProperty Name="IdCandidature" ColumnName="IdCandidature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maintenance">
+      <EntityTypeMapping TypeName="baeModel.Maintenance">
+        <MappingFragment StoreEntitySet="Maintenance">
+          <ScalarProperty Name="IdMaintenance" ColumnName="IdMaintenance" />
+          <ScalarProperty Name="Duree" ColumnName="Duree" />
+          <ScalarProperty Name="MessageMaintenance" ColumnName="MessageMaintenance" />
+          <ScalarProperty Name="DateMaintenance" ColumnName="DateMaintenance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metier">
+      <EntityTypeMapping TypeName="baeModel.Metier">
+        <MappingFragment StoreEntitySet="Metier">
+          <ScalarProperty Name="IdMetier" ColumnName="IdMetier" />
+          <ScalarProperty Name="CategorieMetier" ColumnName="CategorieMetier" />
+          <ScalarProperty Name="NomMetier" ColumnName="NomMetier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notification">
+      <EntityTypeMapping TypeName="baeModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="MessageNotification" ColumnName="MessageNotification" />
+          <ScalarProperty Name="DateNotification" ColumnName="DateNotification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offre">
+      <EntityTypeMapping TypeName="baeModel.Offre">
+        <MappingFragment StoreEntitySet="Offre">
+          <ScalarProperty Name="IdOffre" ColumnName="IdOffre" />
+          <ScalarProperty Name="NumeroOffre" ColumnName="NumeroOffre" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TitreOffre" ColumnName="TitreOffre" />
+          <ScalarProperty Name="DescriptionOffre" ColumnName="DescriptionOffre" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdMetier" ColumnName="IdMetier" />
+          <ScalarProperty Name="IdRemuneration" ColumnName="IdRemuneration" />
+          <ScalarProperty Name="IdAnciennete" ColumnName="IdAnciennete" />
+          <ScalarProperty Name="IdContrat" ColumnName="IdContrat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profile">
+      <EntityTypeMapping TypeName="baeModel.Profile">
+        <MappingFragment StoreEntitySet="Profile">
+          <ScalarProperty Name="IdProfile" ColumnName="IdProfile" />
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="baeModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="ListeRegion" ColumnName="ListeRegion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remuneration">
+      <EntityTypeMapping TypeName="baeModel.Remuneration">
+        <MappingFragment StoreEntitySet="Remuneration">
+          <ScalarProperty Name="IdRemuneration" ColumnName="IdRemuneration" />
+          <ScalarProperty Name="SalaireAnnuelle" ColumnName="SalaireAnnuelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

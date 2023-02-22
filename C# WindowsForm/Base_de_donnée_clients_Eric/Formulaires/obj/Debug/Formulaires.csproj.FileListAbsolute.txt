@@ -1,0 +1,52 @@
+c:\users\ericg\source\repos\Formulaires\Formulaires\bin\Debug\Formulaires.exe.config
+c:\users\ericg\source\repos\Formulaires\Formulaires\bin\Debug\Formulaires.exe
+c:\users\ericg\source\repos\Formulaires\Formulaires\bin\Debug\Formulaires.pdb
+c:\users\ericg\source\repos\Formulaires\Formulaires\bin\Debug\WindowsFormsControlTextBoxEmail.dll
+c:\users\ericg\source\repos\Formulaires\Formulaires\bin\Debug\WindowsFormsControlTextBoxEmail.pdb
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.csprojResolveAssemblyReference.cache
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.Form1.resources
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.Properties.Resources.resources
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.csproj.GenerateResource.Cache
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.csproj.CoreCompileInputs.cache
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.exe
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.pdb
+c:\users\ericg\source\repos\Formulaires\Formulaires\obj\Debug\Formulaires.InterfaceVPC.resources
+C:\Users\afpa\Desktop\Formulaires\Formulaires\bin\Debug\Formulaires.exe.config
+C:\Users\afpa\Desktop\Formulaires\Formulaires\bin\Debug\Formulaires.exe
+C:\Users\afpa\Desktop\Formulaires\Formulaires\bin\Debug\Formulaires.pdb
+C:\Users\afpa\Desktop\Formulaires\Formulaires\bin\Debug\WindowsFormsControlTextBoxEmail.pdb
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.csprojAssemblyReference.cache
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.Form1.resources
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.InterfaceVPC.resources
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.Properties.Resources.resources
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.csproj.GenerateResource.cache
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.csproj.CoreCompileInputs.cache
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.csproj.CopyComplete
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.exe
+C:\Users\afpa\Desktop\Formulaires\Formulaires\obj\Debug\Formulaires.pdb
+E:\vpc Eric\Formulaires\bin\Debug\Formulaires.exe.config
+E:\vpc Eric\Formulaires\bin\Debug\Formulaires.exe
+E:\vpc Eric\Formulaires\bin\Debug\Formulaires.pdb
+E:\vpc Eric\Formulaires\bin\Debug\WindowsFormsControlTextBoxEmail.pdb
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.csprojAssemblyReference.cache
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.Form1.resources
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.InterfaceVPC.resources
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.Properties.Resources.resources
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.csproj.GenerateResource.cache
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.csproj.CoreCompileInputs.cache
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.csproj.CopyComplete
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.exe
+E:\vpc Eric\Formulaires\obj\Debug\Formulaires.pdb
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\bin\Debug\Formulaires.exe.config
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\bin\Debug\Formulaires.exe
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\bin\Debug\Formulaires.pdb
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\bin\Debug\WindowsFormsControlTextBoxEmail.pdb
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.csprojAssemblyReference.cache
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.Form1.resources
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.InterfaceVPC.resources
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.Properties.Resources.resources
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.csproj.GenerateResource.cache
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.csproj.CoreCompileInputs.cache
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.csproj.CopyComplete
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.exe
+E:\cours Afpa2\C# WindowsForm\vpc Eric\Formulaires\obj\Debug\Formulaires.pdb

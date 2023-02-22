@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Models.Candidature
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Candidature</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DATECandidature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATECandidature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Offre.NumeroOffre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Offre.NumeroOffre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdCandidature }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

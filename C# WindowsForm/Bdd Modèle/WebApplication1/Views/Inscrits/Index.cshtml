@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebApplication1.Models.Inscrit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Siret)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Acces.Statut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresse.Rue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Candidature.IdCandidature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maintenance.MessageMaintenance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Siret)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Acces.Statut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adresse.Rue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Candidature.IdCandidature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maintenance.MessageMaintenance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdInscrit }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdInscrit }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdInscrit })
+        </td>
+    </tr>
+}
+
+</table>

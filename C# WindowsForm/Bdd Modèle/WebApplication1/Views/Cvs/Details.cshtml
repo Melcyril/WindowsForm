@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.Cv
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cv</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomCv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomCv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Competence.ListeCompetence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competence.ListeCompetence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.IdProfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profile.IdProfile)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdCv }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

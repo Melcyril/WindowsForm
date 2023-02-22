@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="baeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Acces">
+          <Key>
+            <PropertyRef Name="IdAcces" />
+          </Key>
+          <Property Name="IdAcces" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Statut" Type="varchar(max)" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Adresse">
+          <Key>
+            <PropertyRef Name="IdAdresse" />
+          </Key>
+          <Property Name="IdAdresse" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rue" Type="varchar(max)" Nullable="false" />
+          <Property Name="CodePostal" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="Ville" Type="varchar(max)" Nullable="false" />
+          <Property Name="Pays" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Anciennete">
+          <Key>
+            <PropertyRef Name="IdAnciennete" />
+          </Key>
+          <Property Name="IdAnciennete" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DureeExperience" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="IdArticle" />
+          </Key>
+          <Property Name="IdArticle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DATE" Type="datetime" Nullable="false" />
+          <Property Name="Descriptif" Type="varchar(max)" Nullable="false" />
+          <Property Name="IdImage" Type="int" />
+          <Property Name="IdAcces" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Candidature">
+          <Key>
+            <PropertyRef Name="IdCandidature" />
+          </Key>
+          <Property Name="IdCandidature" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DATECandidature" Type="datetime" Nullable="false" />
+          <Property Name="IdOffre" Type="int" />
+        </EntityType>
+        <EntityType Name="Competence">
+          <Key>
+            <PropertyRef Name="IdCompetence" />
+          </Key>
+          <Property Name="IdCompetence" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ListeCompetence" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Contrat">
+          <Key>
+            <PropertyRef Name="IdContrat" />
+          </Key>
+          <Property Name="IdContrat" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeDeContrat" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv">
+          <Key>
+            <PropertyRef Name="IdCv" />
+          </Key>
+          <Property Name="IdCv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomCv" Type="varchar(max)" Nullable="false" />
+          <Property Name="Url" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="IdCompetence" Type="int" Nullable="false" />
+          <Property Name="IdProfile" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="IdImage" />
+          </Key>
+          <Property Name="IdImage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomImage" Type="varchar(max)" Nullable="false" />
+          <Property Name="URL" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Inscrit">
+          <Key>
+            <PropertyRef Name="IdInscrit" />
+          </Key>
+          <Property Name="IdInscrit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="varchar(max)" Nullable="false" />
+          <Property Name="Prenom" Type="varchar(max)" Nullable="false" />
+          <Property Name="Email" Type="varchar(max)" Nullable="false" />
+          <Property Name="Siret" Type="varchar(max)" Nullable="false" />
+          <Property Name="IdAcces" Type="int" />
+          <Property Name="IdAdresse" Type="int" Nullable="false" />
+          <Property Name="IdMaintenance" Type="int" Nullable="false" />
+          <Property Name="IdCandidature" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Maintenance">
+          <Key>
+            <PropertyRef Name="IdMaintenance" />
+          </Key>
+          <Property Name="IdMaintenance" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Duree" Type="int" Nullable="false" />
+          <Property Name="MessageMaintenance" Type="varchar(max)" Nullable="false" />
+          <Property Name="DateMaintenance" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Metier">
+          <Key>
+            <PropertyRef Name="IdMetier" />
+          </Key>
+          <Property Name="IdMetier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategorieMetier" Type="varchar(max)" Nullable="false" />
+          <Property Name="NomMetier" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="IdNotification" />
+          </Key>
+          <Property Name="IdNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MessageNotification" Type="varchar(max)" Nullable="false" />
+          <Property Name="DateNotification" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Offre">
+          <Key>
+            <PropertyRef Name="IdOffre" />
+          </Key>
+          <Property Name="IdOffre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumeroOffre" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="TitreOffre" Type="varchar(max)" Nullable="false" />
+          <Property Name="DescriptionOffre" Type="varchar(max)" Nullable="false" />
+          <Property Name="IdRegion" Type="int" Nullable="false" />
+          <Property Name="IdMetier" Type="int" Nullable="false" />
+          <Property Name="IdRemuneration" Type="int" Nullable="false" />
+          <Property Name="IdAnciennete" Type="int" Nullable="false" />
+          <Property Name="IdContrat" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="IdProfile" />
+          </Key>
+          <Property Name="IdProfile" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdNotification" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="IdRegion" />
+          </Key>
+          <Property Name="IdRegion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ListeRegion" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Remuneration">
+          <Key>
+            <PropertyRef Name="IdRemuneration" />
+          </Key>
+          <Property Name="IdRemuneration" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SalaireAnnuelle" Type="int" />
+        </EntityType>
+        <Association Name="FK__Article__IdAcces__59063A47">
+          <End Role="Acces" Type="Self.Acces" Multiplicity="1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acces">
+              <PropertyRef Name="IdAcces" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="IdAcces" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Article__IdImage__5812160E">
+          <End Role="Image" Type="Self.Image" Multiplicity="0..1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Image">
+              <PropertyRef Name="IdImage" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="IdImage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Candidatu__IdOff__5BE2A6F2">
+          <End Role="Offre" Type="Self.Offre" Multiplicity="0..1" />
+          <End Role="Candidature" Type="Self.Candidature" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offre">
+              <PropertyRef Name="IdOffre" />
+            </Principal>
+            <Dependent Role="Candidature">
+              <PropertyRef Name="IdOffre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cv__IdCompetence__52593CB8">
+          <End Role="Competence" Type="Self.Competence" Multiplicity="1" />
+          <End Role="Cv" Type="Self.Cv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Competence">
+              <PropertyRef Name="IdCompetence" />
+            </Principal>
+            <Dependent Role="Cv">
+              <PropertyRef Name="IdCompetence" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cv__IdProfile__534D60F1">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
+          <End Role="Cv" Type="Self.Cv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="IdProfile" />
+            </Principal>
+            <Dependent Role="Cv">
+              <PropertyRef Name="IdProfile" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdAcces__60A75C0F">
+          <End Role="Acces" Type="Self.Acces" Multiplicity="0..1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acces">
+              <PropertyRef Name="IdAcces" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdAcces" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdAdres__619B8048">
+          <End Role="Adresse" Type="Self.Adresse" Multiplicity="1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Adresse">
+              <PropertyRef Name="IdAdresse" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdAdresse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdCandi__6383C8BA">
+          <End Role="Candidature" Type="Self.Candidature" Multiplicity="1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Candidature">
+              <PropertyRef Name="IdCandidature" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdCandidature" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdMaint__628FA481">
+          <End Role="Maintenance" Type="Self.Maintenance" Multiplicity="1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maintenance">
+              <PropertyRef Name="IdMaintenance" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdMaintenance" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdAncienn__4BAC3F29">
+          <End Role="Anciennete" Type="Self.Anciennete" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anciennete">
+              <PropertyRef Name="IdAnciennete" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdAnciennete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdContrat__4CA06362">
+          <End Role="Contrat" Type="Self.Contrat" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contrat">
+              <PropertyRef Name="IdContrat" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdContrat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdMetier__49C3F6B7">
+          <End Role="Metier" Type="Self.Metier" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Metier">
+              <PropertyRef Name="IdMetier" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdMetier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdRegion__48CFD27E">
+          <End Role="Region" Type="Self.Region" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="IdRegion" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdRegion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdRemuner__4AB81AF0">
+          <End Role="Remuneration" Type="Self.Remuneration" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Remuneration">
+              <PropertyRef Name="IdRemuneration" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdRemuneration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Profile__IdNotif__4F7CD00D">
+          <End Role="Notification" Type="Self.Notification" Multiplicity="1" />
+          <End Role="Profile" Type="Self.Profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Notification">
+              <PropertyRef Name="IdNotification" />
+            </Principal>
+            <Dependent Role="Profile">
+              <PropertyRef Name="IdNotification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="baeModelStoreContainer">
+          <EntitySet Name="Acces" EntityType="Self.Acces" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Adresse" EntityType="Self.Adresse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Anciennete" EntityType="Self.Anciennete" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidature" EntityType="Self.Candidature" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Competence" EntityType="Self.Competence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contrat" EntityType="Self.Contrat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cv" EntityType="Self.Cv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inscrit" EntityType="Self.Inscrit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Maintenance" EntityType="Self.Maintenance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Metier" EntityType="Self.Metier" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notification" EntityType="Self.Notification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Offre" EntityType="Self.Offre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profile" EntityType="Self.Profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Remuneration" EntityType="Self.Remuneration" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Article__IdAcces__59063A47" Association="Self.FK__Article__IdAcces__59063A47">
+            <End Role="Acces" EntitySet="Acces" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Article__IdImage__5812160E" Association="Self.FK__Article__IdImage__5812160E">
+            <End Role="Image" EntitySet="Image" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Candidatu__IdOff__5BE2A6F2" Association="Self.FK__Candidatu__IdOff__5BE2A6F2">
+            <End Role="Offre" EntitySet="Offre" />
+            <End Role="Candidature" EntitySet="Candidature" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cv__IdCompetence__52593CB8" Association="Self.FK__Cv__IdCompetence__52593CB8">
+            <End Role="Competence" EntitySet="Competence" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cv__IdProfile__534D60F1" Association="Self.FK__Cv__IdProfile__534D60F1">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdAcces__60A75C0F" Association="Self.FK__Inscrit__IdAcces__60A75C0F">
+            <End Role="Acces" EntitySet="Acces" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdAdres__619B8048" Association="Self.FK__Inscrit__IdAdres__619B8048">
+            <End Role="Adresse" EntitySet="Adresse" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdCandi__6383C8BA" Association="Self.FK__Inscrit__IdCandi__6383C8BA">
+            <End Role="Candidature" EntitySet="Candidature" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdMaint__628FA481" Association="Self.FK__Inscrit__IdMaint__628FA481">
+            <End Role="Maintenance" EntitySet="Maintenance" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdAncienn__4BAC3F29" Association="Self.FK__Offre__IdAncienn__4BAC3F29">
+            <End Role="Anciennete" EntitySet="Anciennete" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdContrat__4CA06362" Association="Self.FK__Offre__IdContrat__4CA06362">
+            <End Role="Contrat" EntitySet="Contrat" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdMetier__49C3F6B7" Association="Self.FK__Offre__IdMetier__49C3F6B7">
+            <End Role="Metier" EntitySet="Metier" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdRegion__48CFD27E" Association="Self.FK__Offre__IdRegion__48CFD27E">
+            <End Role="Region" EntitySet="Region" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdRemuner__4AB81AF0" Association="Self.FK__Offre__IdRemuner__4AB81AF0">
+            <End Role="Remuneration" EntitySet="Remuneration" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Profile__IdNotif__4F7CD00D" Association="Self.FK__Profile__IdNotif__4F7CD00D">
+            <End Role="Notification" EntitySet="Notification" />
+            <End Role="Profile" EntitySet="Profile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="baeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Acces">
+          <Key>
+            <PropertyRef Name="IdAcces" />
+          </Key>
+          <Property Name="IdAcces" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Statut" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Article" Relationship="Self.FK__Article__IdAcces__59063A47" FromRole="Acces" ToRole="Article" />
+          <NavigationProperty Name="Inscrit" Relationship="Self.FK__Inscrit__IdAcces__60A75C0F" FromRole="Acces" ToRole="Inscrit" />
+        </EntityType>
+        <EntityType Name="Adresse">
+          <Key>
+            <PropertyRef Name="IdAdresse" />
+          </Key>
+          <Property Name="IdAdresse" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CodePostal" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ville" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pays" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Inscrit" Relationship="Self.FK__Inscrit__IdAdres__619B8048" FromRole="Adresse" ToRole="Inscrit" />
+        </EntityType>
+        <EntityType Name="Anciennete">
+          <Key>
+            <PropertyRef Name="IdAnciennete" />
+          </Key>
+          <Property Name="IdAnciennete" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DureeExperience" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Offre" Relationship="Self.FK__Offre__IdAncienn__4BAC3F29" FromRole="Anciennete" ToRole="Offre" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="IdArticle" />
+          </Key>
+          <Property Name="IdArticle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Descriptif" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdImage" Type="Int32" />
+          <Property Name="IdAcces" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Acces" Relationship="Self.FK__Article__IdAcces__59063A47" FromRole="Article" ToRole="Acces" />
+          <NavigationProperty Name="Image" Relationship="Self.FK__Article__IdImage__5812160E" FromRole="Article" ToRole="Image" />
+        </EntityType>
+        <EntityType Name="Candidature">
+          <Key>
+            <PropertyRef Name="IdCandidature" />
+          </Key>
+          <Property Name="IdCandidature" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DATECandidature" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdOffre" Type="Int32" />
+          <NavigationProperty Name="Offre" Relationship="Self.FK__Candidatu__IdOff__5BE2A6F2" FromRole="Candidature" ToRole="Offre" />
+          <NavigationProperty Name="Inscrit" Relationship="Self.FK__Inscrit__IdCandi__6383C8BA" FromRole="Candidature" ToRole="Inscrit" />
+        </EntityType>
+        <EntityType Name="Competence">
+          <Key>
+            <PropertyRef Name="IdCompetence" />
+          </Key>
+          <Property Name="IdCompetence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListeCompetence" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cv" Relationship="Self.FK__Cv__IdCompetence__52593CB8" FromRole="Competence" ToRole="Cv" />
+        </EntityType>
+        <EntityType Name="Contrat">
+          <Key>
+            <PropertyRef Name="IdContrat" />
+          </Key>
+          <Property Name="IdContrat" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeDeContrat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Offre" Relationship="Self.FK__Offre__IdContrat__4CA06362" FromRole="Contrat" ToRole="Offre" />
+        </EntityType>
+        <EntityType Name="Cv">
+          <Key>
+            <PropertyRef Name="IdCv" />
+          </Key>
+          <Property Name="IdCv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomCv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdCompetence" Type="Int32" Nullable="false" />
+          <Property Name="IdProfile" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Competence" Relationship="Self.FK__Cv__IdCompetence__52593CB8" FromRole="Cv" ToRole="Competence" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK__Cv__IdProfile__534D60F1" FromRole="Cv" ToRole="Profile" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="IdImage" />
+          </Key>
+          <Property Name="IdImage" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Article" Relationship="Self.FK__Article__IdImage__5812160E" FromRole="Image" ToRole="Article" />
+        </EntityType>
+        <EntityType Name="Inscrit">
+          <Key>
+            <PropertyRef Name="IdInscrit" />
+          </Key>
+          <Property Name="IdInscrit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Prenom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Siret" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdAcces" Type="Int32" />
+          <Property Name="IdAdresse" Type="Int32" Nullable="false" />
+          <Property Name="IdMaintenance" Type="Int32" Nullable="false" />
+          <Property Name="IdCandidature" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Acces" Relationship="Self.FK__Inscrit__IdAcces__60A75C0F" FromRole="Inscrit" ToRole="Acces" />
+          <NavigationProperty Name="Adresse" Relationship="Self.FK__Inscrit__IdAdres__619B8048" FromRole="Inscrit" ToRole="Adresse" />
+          <NavigationProperty Name="Candidature" Relationship="Self.FK__Inscrit__IdCandi__6383C8BA" FromRole="Inscrit" ToRole="Candidature" />
+          <NavigationProperty Name="Maintenance" Relationship="Self.FK__Inscrit__IdMaint__628FA481" FromRole="Inscrit" ToRole="Maintenance" />
+        </EntityType>
+        <EntityType Name="Maintenance">
+          <Key>
+            <PropertyRef Name="IdMaintenance" />
+          </Key>
+          <Property Name="IdMaintenance" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Duree" Type="Int32" Nullable="false" />
+          <Property Name="MessageMaintenance" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateMaintenance" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Inscrit" Relationship="Self.FK__Inscrit__IdMaint__628FA481" FromRole="Maintenance" ToRole="Inscrit" />
+        </EntityType>
+        <EntityType Name="Metier">
+          <Key>
+            <PropertyRef Name="IdMetier" />
+          </Key>
+          <Property Name="IdMetier" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategorieMetier" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NomMetier" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Offre" Relationship="Self.FK__Offre__IdMetier__49C3F6B7" FromRole="Metier" ToRole="Offre" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="IdNotification" />
+          </Key>
+          <Property Name="IdNotification" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MessageNotification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateNotification" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK__Profile__IdNotif__4F7CD00D" FromRole="Notification" ToRole="Profile" />
+        </EntityType>
+        <EntityType Name="Offre">
+          <Key>
+            <PropertyRef Name="IdOffre" />
+          </Key>
+          <Property Name="IdOffre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroOffre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TitreOffre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DescriptionOffre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdRegion" Type="Int32" Nullable="false" />
+          <Property Name="IdMetier" Type="Int32" Nullable="false" />
+          <Property Name="IdRemuneration" Type="Int32" Nullable="false" />
+          <Property Name="IdAnciennete" Type="Int32" Nullable="false" />
+          <Property Name="IdContrat" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Anciennete" Relationship="Self.FK__Offre__IdAncienn__4BAC3F29" FromRole="Offre" ToRole="Anciennete" />
+          <NavigationProperty Name="Candidature" Relationship="Self.FK__Candidatu__IdOff__5BE2A6F2" FromRole="Offre" ToRole="Candidature" />
+          <NavigationProperty Name="Contrat" Relationship="Self.FK__Offre__IdContrat__4CA06362" FromRole="Offre" ToRole="Contrat" />
+          <NavigationProperty Name="Metier" Relationship="Self.FK__Offre__IdMetier__49C3F6B7" FromRole="Offre" ToRole="Metier" />
+          <NavigationProperty Name="Region" Relationship="Self.FK__Offre__IdRegion__48CFD27E" FromRole="Offre" ToRole="Region" />
+          <NavigationProperty Name="Remuneration" Relationship="Self.FK__Offre__IdRemuner__4AB81AF0" FromRole="Offre" ToRole="Remuneration" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="IdProfile" />
+          </Key>
+          <Property Name="IdProfile" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdNotification" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cv" Relationship="Self.FK__Cv__IdProfile__534D60F1" FromRole="Profile" ToRole="Cv" />
+          <NavigationProperty Name="Notification" Relationship="Self.FK__Profile__IdNotif__4F7CD00D" FromRole="Profile" ToRole="Notification" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="IdRegion" />
+          </Key>
+          <Property Name="IdRegion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListeRegion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Offre" Relationship="Self.FK__Offre__IdRegion__48CFD27E" FromRole="Region" ToRole="Offre" />
+        </EntityType>
+        <EntityType Name="Remuneration">
+          <Key>
+            <PropertyRef Name="IdRemuneration" />
+          </Key>
+          <Property Name="IdRemuneration" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalaireAnnuelle" Type="Int32" />
+          <NavigationProperty Name="Offre" Relationship="Self.FK__Offre__IdRemuner__4AB81AF0" FromRole="Remuneration" ToRole="Offre" />
+        </EntityType>
+        <Association Name="FK__Article__IdAcces__59063A47">
+          <End Role="Acces" Type="Self.Acces" Multiplicity="1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acces">
+              <PropertyRef Name="IdAcces" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="IdAcces" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdAcces__60A75C0F">
+          <End Role="Acces" Type="Self.Acces" Multiplicity="0..1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acces">
+              <PropertyRef Name="IdAcces" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdAcces" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdAdres__619B8048">
+          <End Role="Adresse" Type="Self.Adresse" Multiplicity="1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Adresse">
+              <PropertyRef Name="IdAdresse" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdAdresse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdAncienn__4BAC3F29">
+          <End Role="Anciennete" Type="Self.Anciennete" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anciennete">
+              <PropertyRef Name="IdAnciennete" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdAnciennete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Article__IdImage__5812160E">
+          <End Role="Image" Type="Self.Image" Multiplicity="0..1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Image">
+              <PropertyRef Name="IdImage" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="IdImage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Candidatu__IdOff__5BE2A6F2">
+          <End Role="Offre" Type="Self.Offre" Multiplicity="0..1" />
+          <End Role="Candidature" Type="Self.Candidature" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offre">
+              <PropertyRef Name="IdOffre" />
+            </Principal>
+            <Dependent Role="Candidature">
+              <PropertyRef Name="IdOffre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdCandi__6383C8BA">
+          <End Role="Candidature" Type="Self.Candidature" Multiplicity="1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Candidature">
+              <PropertyRef Name="IdCandidature" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdCandidature" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cv__IdCompetence__52593CB8">
+          <End Role="Competence" Type="Self.Competence" Multiplicity="1" />
+          <End Role="Cv" Type="Self.Cv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Competence">
+              <PropertyRef Name="IdCompetence" />
+            </Principal>
+            <Dependent Role="Cv">
+              <PropertyRef Name="IdCompetence" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdContrat__4CA06362">
+          <End Role="Contrat" Type="Self.Contrat" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contrat">
+              <PropertyRef Name="IdContrat" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdContrat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cv__IdProfile__534D60F1">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
+          <End Role="Cv" Type="Self.Cv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="IdProfile" />
+            </Principal>
+            <Dependent Role="Cv">
+              <PropertyRef Name="IdProfile" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inscrit__IdMaint__628FA481">
+          <End Role="Maintenance" Type="Self.Maintenance" Multiplicity="1" />
+          <End Role="Inscrit" Type="Self.Inscrit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maintenance">
+              <PropertyRef Name="IdMaintenance" />
+            </Principal>
+            <Dependent Role="Inscrit">
+              <PropertyRef Name="IdMaintenance" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdMetier__49C3F6B7">
+          <End Role="Metier" Type="Self.Metier" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Metier">
+              <PropertyRef Name="IdMetier" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdMetier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Profile__IdNotif__4F7CD00D">
+          <End Role="Notification" Type="Self.Notification" Multiplicity="1" />
+          <End Role="Profile" Type="Self.Profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Notification">
+              <PropertyRef Name="IdNotification" />
+            </Principal>
+            <Dependent Role="Profile">
+              <PropertyRef Name="IdNotification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdRegion__48CFD27E">
+          <End Role="Region" Type="Self.Region" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="IdRegion" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdRegion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Offre__IdRemuner__4AB81AF0">
+          <End Role="Remuneration" Type="Self.Remuneration" Multiplicity="1" />
+          <End Role="Offre" Type="Self.Offre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Remuneration">
+              <PropertyRef Name="IdRemuneration" />
+            </Principal>
+            <Dependent Role="Offre">
+              <PropertyRef Name="IdRemuneration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="baeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Acces" EntityType="Self.Acces" />
+          <EntitySet Name="Adresse" EntityType="Self.Adresse" />
+          <EntitySet Name="Anciennete" EntityType="Self.Anciennete" />
+          <EntitySet Name="Article" EntityType="Self.Article" />
+          <EntitySet Name="Candidature" EntityType="Self.Candidature" />
+          <EntitySet Name="Competence" EntityType="Self.Competence" />
+          <EntitySet Name="Contrat" EntityType="Self.Contrat" />
+          <EntitySet Name="Cv" EntityType="Self.Cv" />
+          <EntitySet Name="Image" EntityType="Self.Image" />
+          <EntitySet Name="Inscrit" EntityType="Self.Inscrit" />
+          <EntitySet Name="Maintenance" EntityType="Self.Maintenance" />
+          <EntitySet Name="Metier" EntityType="Self.Metier" />
+          <EntitySet Name="Notification" EntityType="Self.Notification" />
+          <EntitySet Name="Offre" EntityType="Self.Offre" />
+          <EntitySet Name="Profile" EntityType="Self.Profile" />
+          <EntitySet Name="Region" EntityType="Self.Region" />
+          <EntitySet Name="Remuneration" EntityType="Self.Remuneration" />
+          <AssociationSet Name="FK__Article__IdAcces__59063A47" Association="Self.FK__Article__IdAcces__59063A47">
+            <End Role="Acces" EntitySet="Acces" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdAcces__60A75C0F" Association="Self.FK__Inscrit__IdAcces__60A75C0F">
+            <End Role="Acces" EntitySet="Acces" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdAdres__619B8048" Association="Self.FK__Inscrit__IdAdres__619B8048">
+            <End Role="Adresse" EntitySet="Adresse" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdAncienn__4BAC3F29" Association="Self.FK__Offre__IdAncienn__4BAC3F29">
+            <End Role="Anciennete" EntitySet="Anciennete" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Article__IdImage__5812160E" Association="Self.FK__Article__IdImage__5812160E">
+            <End Role="Image" EntitySet="Image" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Candidatu__IdOff__5BE2A6F2" Association="Self.FK__Candidatu__IdOff__5BE2A6F2">
+            <End Role="Offre" EntitySet="Offre" />
+            <End Role="Candidature" EntitySet="Candidature" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdCandi__6383C8BA" Association="Self.FK__Inscrit__IdCandi__6383C8BA">
+            <End Role="Candidature" EntitySet="Candidature" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cv__IdCompetence__52593CB8" Association="Self.FK__Cv__IdCompetence__52593CB8">
+            <End Role="Competence" EntitySet="Competence" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdContrat__4CA06362" Association="Self.FK__Offre__IdContrat__4CA06362">
+            <End Role="Contrat" EntitySet="Contrat" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cv__IdProfile__534D60F1" Association="Self.FK__Cv__IdProfile__534D60F1">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inscrit__IdMaint__628FA481" Association="Self.FK__Inscrit__IdMaint__628FA481">
+            <End Role="Maintenance" EntitySet="Maintenance" />
+            <End Role="Inscrit" EntitySet="Inscrit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdMetier__49C3F6B7" Association="Self.FK__Offre__IdMetier__49C3F6B7">
+            <End Role="Metier" EntitySet="Metier" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Profile__IdNotif__4F7CD00D" Association="Self.FK__Profile__IdNotif__4F7CD00D">
+            <End Role="Notification" EntitySet="Notification" />
+            <End Role="Profile" EntitySet="Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdRegion__48CFD27E" Association="Self.FK__Offre__IdRegion__48CFD27E">
+            <End Role="Region" EntitySet="Region" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Offre__IdRemuner__4AB81AF0" Association="Self.FK__Offre__IdRemuner__4AB81AF0">
+            <End Role="Remuneration" EntitySet="Remuneration" />
+            <End Role="Offre" EntitySet="Offre" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="baeModelStoreContainer" CdmEntityContainer="baeEntities">
+          <EntitySetMapping Name="Acces">
+            <EntityTypeMapping TypeName="baeModel.Acces">
+              <MappingFragment StoreEntitySet="Acces">
+                <ScalarProperty Name="IdAcces" ColumnName="IdAcces" />
+                <ScalarProperty Name="Statut" ColumnName="Statut" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Adresse">
+            <EntityTypeMapping TypeName="baeModel.Adresse">
+              <MappingFragment StoreEntitySet="Adresse">
+                <ScalarProperty Name="IdAdresse" ColumnName="IdAdresse" />
+                <ScalarProperty Name="Rue" ColumnName="Rue" />
+                <ScalarProperty Name="CodePostal" ColumnName="CodePostal" />
+                <ScalarProperty Name="Ville" ColumnName="Ville" />
+                <ScalarProperty Name="Pays" ColumnName="Pays" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Anciennete">
+            <EntityTypeMapping TypeName="baeModel.Anciennete">
+              <MappingFragment StoreEntitySet="Anciennete">
+                <ScalarProperty Name="IdAnciennete" ColumnName="IdAnciennete" />
+                <ScalarProperty Name="DureeExperience" ColumnName="DureeExperience" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Article">
+            <EntityTypeMapping TypeName="baeModel.Article">
+              <MappingFragment StoreEntitySet="Article">
+                <ScalarProperty Name="IdArticle" ColumnName="IdArticle" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="Descriptif" ColumnName="Descriptif" />
+                <ScalarProperty Name="IdImage" ColumnName="IdImage" />
+                <ScalarProperty Name="IdAcces" ColumnName="IdAcces" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidature">
+            <EntityTypeMapping TypeName="baeModel.Candidature">
+              <MappingFragment StoreEntitySet="Candidature">
+                <ScalarProperty Name="IdCandidature" ColumnName="IdCandidature" />
+                <ScalarProperty Name="DATECandidature" ColumnName="DATECandidature" />
+                <ScalarProperty Name="IdOffre" ColumnName="IdOffre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Competence">
+            <EntityTypeMapping TypeName="baeModel.Competence">
+              <MappingFragment StoreEntitySet="Competence">
+                <ScalarProperty Name="IdCompetence" ColumnName="IdCompetence" />
+                <ScalarProperty Name="ListeCompetence" ColumnName="ListeCompetence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contrat">
+            <EntityTypeMapping TypeName="baeModel.Contrat">
+              <MappingFragment StoreEntitySet="Contrat">
+                <ScalarProperty Name="IdContrat" ColumnName="IdContrat" />
+                <ScalarProperty Name="TypeDeContrat" ColumnName="TypeDeContrat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cv">
+            <EntityTypeMapping TypeName="baeModel.Cv">
+              <MappingFragment StoreEntitySet="Cv">
+                <ScalarProperty Name="IdCv" ColumnName="IdCv" />
+                <ScalarProperty Name="NomCv" ColumnName="NomCv" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="IdCompetence" ColumnName="IdCompetence" />
+                <ScalarProperty Name="IdProfile" ColumnName="IdProfile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Image">
+            <EntityTypeMapping TypeName="baeModel.Image">
+              <MappingFragment StoreEntitySet="Image">
+                <ScalarProperty Name="IdImage" ColumnName="IdImage" />
+                <ScalarProperty Name="NomImage" ColumnName="NomImage" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inscrit">
+            <EntityTypeMapping TypeName="baeModel.Inscrit">
+              <MappingFragment StoreEntitySet="Inscrit">
+                <ScalarProperty Name="IdInscrit" ColumnName="IdInscrit" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Siret" ColumnName="Siret" />
+                <ScalarProperty Name="IdAcces" ColumnName="IdAcces" />
+                <ScalarProperty Name="IdAdresse" ColumnName="IdAdresse" />
+                <ScalarProperty Name="IdMaintenance" ColumnName="IdMaintenance" />
+                <ScalarProperty Name="IdCandidature" ColumnName="IdCandidature" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Maintenance">
+            <EntityTypeMapping TypeName="baeModel.Maintenance">
+              <MappingFragment StoreEntitySet="Maintenance">
+                <ScalarProperty Name="IdMaintenance" ColumnName="IdMaintenance" />
+                <ScalarProperty Name="Duree" ColumnName="Duree" />
+                <ScalarProperty Name="MessageMaintenance" ColumnName="MessageMaintenance" />
+                <ScalarProperty Name="DateMaintenance" ColumnName="DateMaintenance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Metier">
+            <EntityTypeMapping TypeName="baeModel.Metier">
+              <MappingFragment StoreEntitySet="Metier">
+                <ScalarProperty Name="IdMetier" ColumnName="IdMetier" />
+                <ScalarProperty Name="CategorieMetier" ColumnName="CategorieMetier" />
+                <ScalarProperty Name="NomMetier" ColumnName="NomMetier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notification">
+            <EntityTypeMapping TypeName="baeModel.Notification">
+              <MappingFragment StoreEntitySet="Notification">
+                <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+                <ScalarProperty Name="MessageNotification" ColumnName="MessageNotification" />
+                <ScalarProperty Name="DateNotification" ColumnName="DateNotification" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offre">
+            <EntityTypeMapping TypeName="baeModel.Offre">
+              <MappingFragment StoreEntitySet="Offre">
+                <ScalarProperty Name="IdOffre" ColumnName="IdOffre" />
+                <ScalarProperty Name="NumeroOffre" ColumnName="NumeroOffre" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TitreOffre" ColumnName="TitreOffre" />
+                <ScalarProperty Name="DescriptionOffre" ColumnName="DescriptionOffre" />
+                <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+                <ScalarProperty Name="IdMetier" ColumnName="IdMetier" />
+                <ScalarProperty Name="IdRemuneration" ColumnName="IdRemuneration" />
+                <ScalarProperty Name="IdAnciennete" ColumnName="IdAnciennete" />
+                <ScalarProperty Name="IdContrat" ColumnName="IdContrat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profile">
+            <EntityTypeMapping TypeName="baeModel.Profile">
+              <MappingFragment StoreEntitySet="Profile">
+                <ScalarProperty Name="IdProfile" ColumnName="IdProfile" />
+                <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Region">
+            <EntityTypeMapping TypeName="baeModel.Region">
+              <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+                <ScalarProperty Name="ListeRegion" ColumnName="ListeRegion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Remuneration">
+            <EntityTypeMapping TypeName="baeModel.Remuneration">
+              <MappingFragment StoreEntitySet="Remuneration">
+                <ScalarProperty Name="IdRemuneration" ColumnName="IdRemuneration" />
+                <ScalarProperty Name="SalaireAnnuelle" ColumnName="SalaireAnnuelle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
